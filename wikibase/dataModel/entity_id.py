@@ -1,0 +1,2 @@
+class EntityId:
+    pass
