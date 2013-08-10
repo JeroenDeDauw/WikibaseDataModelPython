@@ -1,6 +1,6 @@
 language: python
 
-node_js:
+python:
   - "3.2"
   - "3.3"
 
