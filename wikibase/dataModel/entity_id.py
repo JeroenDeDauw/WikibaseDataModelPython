@@ -1,2 +1,5 @@
 class EntityId:
-    pass
+
+    def __init__(self, entityType, serialization):
+        self.entityType = entityType
+        self.serialization = serialization
