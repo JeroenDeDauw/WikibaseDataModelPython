@@ -13,7 +13,7 @@ class TestBooleanValue(unittest.TestCase):
     def test_get_type_returns_string(self):
         self.assertIsInstance(self.new_instance().getType(), str)
 
-    def test_get_sort_key_raises_error(self):
+    def test_get_sort_key_returns_correct_type(self):
         self.assertIsInstance(
             self.new_instance().getSortKey(),
             (str, int, float)
