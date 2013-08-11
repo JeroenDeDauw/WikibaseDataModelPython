@@ -10,7 +10,7 @@ setup(
     author_email='jeroendedauw@gmail.com',
     description='Implementation of the Wikibase DataModel in Python',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha'
+        'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
