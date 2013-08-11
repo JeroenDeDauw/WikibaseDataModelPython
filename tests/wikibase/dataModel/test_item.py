@@ -7,6 +7,9 @@ class TestItem(EntityTestCase):
     def new_instance(self):
         return Item()
 
+    # TODO: move entity test methods into base class or shared thing
+    # TODO: test methods reject bad input
+
     def test_set_and_get_id(self):
         item = Item()
 
