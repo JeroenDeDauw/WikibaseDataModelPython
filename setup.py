@@ -19,6 +19,5 @@ setup(
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules'
         'License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)'
-y
     ]
 )
