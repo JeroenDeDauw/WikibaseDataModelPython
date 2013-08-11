@@ -4,10 +4,10 @@ from wikibase.dataModel.entity_id import EntityId
 from wikibase.dataModel.property_snak import PropertySnak
 
 
-class TestPropertyValueSnak(unittest.TestCase, SnakTestCase):
+class TestPropertySnak(unittest.TestCase, SnakTestCase):
 
     def new_instance(self):
-        return PropertySnak('value', EntityId('property', 42))
+        return PropertySnak('novalue', EntityId('property', 42))
 
     def test_constructor_sets_fields(self):
         snakType = 'somevalue'
