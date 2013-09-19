@@ -1,9 +1,9 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
     name='WikibaseDataModel',
     version='0.0.1',
-    packages=[],
+    packages=find_packages(),
     url='https://github.com/JeroenDeDauw/WikibaseDataModelPython',
     license='GPL v2+',
     author='Jeroen De Dauw',
@@ -19,5 +19,9 @@ setup(
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules'
         'License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)'
+    ],
+    include_package_data=True,
+    install_requires=[
+        "unittest-dataprovider >= 1.0.1"
     ]
 )
