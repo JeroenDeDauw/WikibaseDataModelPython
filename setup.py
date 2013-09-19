@@ -22,6 +22,6 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        "unittest-dataprovider >= 1.0.1"
+        "unittest-data-provider >= 1.0.1"
     ]
 )
