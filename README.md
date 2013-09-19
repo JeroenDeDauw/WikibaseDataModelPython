@@ -2,6 +2,9 @@
 
 [![Build Status](https://secure.travis-ci.org/JeroenDeDauw/WikibaseDataModelPython.png)](https://travis-ci.org/JeroenDeDauw/WikibaseDataModelPython/builds)
 
+On PyPi: [![Latest release](https://pypip.in/v/WikibaseDataModel/badge.png)](https://pypi.python.org/pypi/WikibaseDataModel)
+[![Download count](https://pypip.in/d/WikibaseDataModel/badge.png)](https://pypi.python.org/pypi/WikibaseDataModel)
+
 Implementation of the [Wikibase DataModel](https://meta.wikimedia.org/wiki/Wikidata/Data_model) in Python.
 
 Author: Jeroen De Dauw
