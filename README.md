@@ -9,7 +9,7 @@ Implementation of the [Wikibase DataModel](https://meta.wikimedia.org/wiki/Wikid
 
 Author: Jeroen De Dauw
 
-License: GMU GPL v2+
+License: GNU GPL v2+
 
 ## Links
 
