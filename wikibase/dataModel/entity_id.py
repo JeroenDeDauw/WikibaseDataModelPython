@@ -6,3 +6,6 @@ class EntityId:
 
     def getSerialization(self):
         return self.serialization
+
+    def getEntityType(self):
+        return self.entityType
