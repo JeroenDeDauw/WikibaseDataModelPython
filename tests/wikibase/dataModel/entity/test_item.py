@@ -2,6 +2,7 @@ from unittest_data_provider import data_provider
 from tests.wikibase.dataModel.entity.entity_test_case import EntityTestCase
 from wikibase.dataModel.entity.item import Item
 from wikibase.dataModel.entity.item_id import ItemId
+from wikibase.dataModel.entity.property_id import PropertyId
 
 
 class TestItem(EntityTestCase):
@@ -19,6 +20,16 @@ class TestItem(EntityTestCase):
     def test_constructor(self, itemId):
         item = Item(itemId)
         self.assertEqual(item.getId(), itemId)
+
+    invalidIds = lambda: (
+        (PropertyId('p42'), ),
+        ('q42', ),
+        (None, ),
+    )
+
+    @data_provider(invalidIds)
+    def test_constructor(self, invalidId):
+        self.assertRaises(TypeError, lambda invalidId: Item(invalidId), invalidId)
 
     def new_instance(self):
         return Item(ItemId('q42'))
