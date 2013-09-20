@@ -4,7 +4,7 @@ from wikibase.dataModel.property_id import PropertyId
 
 
 class TestPropertyId(unittest.TestCase):
-    itemIds = lambda: (
+    propertyIds = lambda: (
         ('p42', ),
         ('P42', ),
         ('P1', ),
@@ -12,8 +12,27 @@ class TestPropertyId(unittest.TestCase):
         ('P31337', ),
     )
 
-    @data_provider(itemIds)
-    def test_constructor(self, itemString):
-        propertyId = PropertyId(itemString)
-        self.assertEqual(propertyId.getSerialization(), itemString.upper())
+    @data_provider(propertyIds)
+    def test_constructor(self, idString):
+        propertyId = PropertyId(idString)
+        self.assertEqual(propertyId.getSerialization(), idString.upper())
         self.assertEqual(propertyId.getEntityType(), 'property')
+
+    invalidIds = lambda: (
+        ('p 42', ),
+        ('42p', ),
+        ('P0', ),
+        ('P1000.', ),
+        ('P1000q', ),
+        ('P10.00', ),
+        ('P', ),
+        ('', ),
+        (' ', ),
+        (' p42', ),
+        ('q42', ),
+    )
+
+    @data_provider(invalidIds)
+    def test_constructor_does_not_accept_invalid_id(self, invalidId):
+        doConstruct = lambda anId: PropertyId(anId)
+        self.assertRaises(ValueError, doConstruct, invalidId)
