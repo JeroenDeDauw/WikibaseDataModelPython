@@ -1,6 +1,6 @@
 class Entity:
 
-    def setId(self, entityId):
+    def __init__(self, entityId):
         self._id = entityId
 
     def getId(self):

@@ -1,25 +1,30 @@
+from unittest_data_provider import data_provider
 from tests.wikibase.dataModel.entity.entity_test_case import EntityTestCase
 from wikibase.dataModel.entity.item import Item
+from wikibase.dataModel.entity.item_id import ItemId
 
 
 class TestItem(EntityTestCase):
 
-    def new_instance(self):
-        return Item()
-
     # TODO: move entity test methods into base class or shared thing
     # TODO: test methods reject bad input
 
-    def test_set_and_get_id(self):
-        item = Item()
+    itemIds = lambda: (
+        (ItemId('q42'), ),
+        (ItemId('q1'), ),
+        (ItemId('q31337'), ),
+    )
 
-        entityId = 42
+    @data_provider(itemIds)
+    def test_constructor(self, itemId):
+        item = Item(itemId)
+        self.assertEqual(item.getId(), itemId)
 
-        item.setId(entityId)
-        self.assertEqual(item.getId(), entityId)
+    def new_instance(self):
+        return Item(ItemId('q42'))
 
     def test_set_and_get_labels(self):
-        item = Item()
+        item = self.new_instance()
 
         labels = {
             'en': 'foo',
@@ -30,7 +35,7 @@ class TestItem(EntityTestCase):
         self.assertEqual(item.getLabels(), labels)
 
     def test_set_and_get_descriptions(self):
-        item = Item()
+        item = self.new_instance()
 
         descriptions = {
             'en': 'foo',
@@ -41,7 +46,7 @@ class TestItem(EntityTestCase):
         self.assertEqual(item.getDescriptions(), descriptions)
 
     def test_set_and_get_aliases(self):
-        item = Item()
+        item = self.new_instance()
 
         aliases = {
             'en': ('foo', 'bar'),
