@@ -15,5 +15,5 @@ class TestItemId(unittest.TestCase):
     @data_provider(itemIds)
     def test_constructor(self, itemString):
         itemId = ItemId(itemString)
-        self.assertEqual(itemId.getSerialization(), itemString)
+        self.assertEqual(itemId.getSerialization(), itemString.upper())
         self.assertEqual(itemId.getEntityType(), 'item')
