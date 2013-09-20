@@ -1,5 +1,5 @@
-from tests.wikibase.dataModel.entity_test_case import EntityTestCase
-from wikibase.dataModel.item import Item
+from tests.wikibase.dataModel.entity.entity_test_case import EntityTestCase
+from wikibase.dataModel.entity.item import Item
 
 
 class TestItem(EntityTestCase):

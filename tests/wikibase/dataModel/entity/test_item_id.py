@@ -1,6 +1,8 @@
 import unittest
-from wikibase.dataModel.item_id import ItemId
+
 from unittest_data_provider import data_provider
+
+from wikibase.dataModel.entity.item_id import ItemId
 
 
 class TestItemId(unittest.TestCase):

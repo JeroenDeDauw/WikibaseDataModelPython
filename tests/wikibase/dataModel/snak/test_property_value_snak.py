@@ -1,8 +1,8 @@
 import unittest
 from dataValues.stringValue import StringValue
-from tests.wikibase.dataModel.snak_test_case import SnakTestCase
-from wikibase.dataModel.entity_id import EntityId
-from wikibase.dataModel.property_value_snak import PropertyValueSnak
+from tests.wikibase.dataModel.snak.snak_test_case import SnakTestCase
+from wikibase.dataModel.entity.entity_id import EntityId
+from wikibase.dataModel.snak.property_value_snak import PropertyValueSnak
 
 
 class TestPropertyValueSnak(unittest.TestCase, SnakTestCase):

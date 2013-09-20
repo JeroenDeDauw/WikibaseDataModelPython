@@ -1,4 +1,4 @@
-from wikibase.dataModel.property_snak import PropertySnak
+from wikibase.dataModel.snak.property_snak import PropertySnak
 
 
 class PropertyValueSnak(PropertySnak):

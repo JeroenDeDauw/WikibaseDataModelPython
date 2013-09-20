@@ -1,5 +1,5 @@
 import unittest
-from wikibase.dataModel.entity_id import EntityId
+from wikibase.dataModel.entity.entity_id import EntityId
 
 
 class TestEntityId(unittest.TestCase):

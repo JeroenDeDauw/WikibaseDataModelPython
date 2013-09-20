@@ -1,7 +1,7 @@
 import unittest
-from tests.wikibase.dataModel.snak_test_case import SnakTestCase
-from wikibase.dataModel.entity_id import EntityId
-from wikibase.dataModel.property_snak import PropertySnak
+from tests.wikibase.dataModel.snak.snak_test_case import SnakTestCase
+from wikibase.dataModel.entity.entity_id import EntityId
+from wikibase.dataModel.snak.property_snak import PropertySnak
 
 
 class TestPropertySnak(unittest.TestCase, SnakTestCase):

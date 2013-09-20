@@ -1,6 +1,6 @@
 import unittest
 from unittest_data_provider import data_provider
-from wikibase.dataModel.property_id import PropertyId
+from wikibase.dataModel.entity.property_id import PropertyId
 
 
 class TestPropertyId(unittest.TestCase):

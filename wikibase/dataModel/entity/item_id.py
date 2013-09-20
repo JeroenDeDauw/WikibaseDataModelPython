@@ -1,5 +1,5 @@
 import re
-from wikibase.dataModel.entity_id import EntityId
+from wikibase.dataModel.entity.entity_id import EntityId
 
 
 class ItemId(EntityId):
